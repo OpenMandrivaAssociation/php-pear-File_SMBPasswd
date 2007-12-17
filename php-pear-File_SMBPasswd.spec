@@ -17,7 +17,6 @@ Requires:	php-pear
 Requires:	php-mhash
 BuildArch:	noarch
 BuildRequires:	dos2unix
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 With this package, you can maintain smbpasswd-files, usualy used by
