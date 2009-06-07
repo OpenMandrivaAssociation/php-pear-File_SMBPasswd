@@ -6,7 +6,7 @@
 Summary:	%{_pearname} - class for managing SAMBA style password files
 Name:		php-pear-%{_pearname}
 Version:	1.0.3
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	PHP License
 Group:		Development/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tar.bz2
@@ -14,10 +14,8 @@ URL:		http://pear.php.net/package/File_SMBPasswd/
 Requires(post): php-pear
 Requires(preun): php-pear
 Requires:	php-pear
-Requires:	php-mhash
 BuildArch:	noarch
-BuildRequires:	dos2unix
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 With this package, you can maintain smbpasswd-files, usualy used by
@@ -36,9 +34,6 @@ find . -type f -perm 0444 -exec chmod 644 {} \;
 for i in `find . -type d -name CVS` `find . -type f -name .cvs\*` `find . -type f -name .#\*`; do
     if [ -e "$i" ]; then rm -rf $i; fi >&/dev/null
 done
-
-# strip away annoying ^M
-find -type f | grep -v ".gif" | grep -v ".png" | grep -v ".jpg" | xargs dos2unix -U
 
 %install
 rm -rf %{buildroot}
@@ -73,7 +68,7 @@ fi
 rm -rf %{buildroot}
 
 %files
-%defattr(644,root,root,755)
+%defattr(-,root,root)
 %doc %{_pearname}-%{version}/examples
 %{_datadir}/pear/%{_class}/*.php
 %{_datadir}/pear/packages/%{_pearname}.xml
