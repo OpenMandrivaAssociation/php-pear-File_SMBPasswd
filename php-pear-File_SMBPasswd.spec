@@ -4,7 +4,7 @@
 
 Name:		php-pear-%{upstream_name}
 Version:	1.0.3
-Release:	%mkrel 3
+Release:	%mkrel 4
 Summary:	Class for managing SAMBA style password files
 License:	PHP License
 Group:		Development/PHP
