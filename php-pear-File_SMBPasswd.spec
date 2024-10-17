@@ -8,7 +8,7 @@ Release:	9
 Summary:	Class for managing SAMBA style password files
 License:	PHP License
 Group:		Development/PHP
-URL:		http://pear.php.net/package/File_SMBPasswd/
+URL:		https://pear.php.net/package/File_SMBPasswd/
 Source0:	http://download.pear.php.net/package/%{upstream_name}-%{version}.tar.bz2
 Requires(post): php-pear
 Requires(preun): php-pear
